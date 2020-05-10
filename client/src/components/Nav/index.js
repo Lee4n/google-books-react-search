@@ -7,13 +7,13 @@ function Nav() {
         Google Books Search
       </a>
       <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Search</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Saved</a>
-      </li>
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Saved</a>
+        </li>
+      </ul>
     </nav>
   );
 };
