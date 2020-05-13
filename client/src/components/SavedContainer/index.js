@@ -2,9 +2,8 @@ import React from "react";
 
 function SavedContainer(props) {
   return (
-    <div>
-      <div className="container clearfix shadow-lg p-3 mb-5 bg-white rounded">Saved
-      </div>
+    <div className="container clearfix shadow-lg p-3 mb-5 bg-white rounded">
+      <h5 className="card-title">Results</h5>
       {props.children}
     </div>
 

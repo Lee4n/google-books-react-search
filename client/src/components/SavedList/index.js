@@ -1,4 +1,4 @@
-import React ,{Component} from "react";
+import React, {Component} from "react";
 import API from "../../utils/API";
 
 class SavedList extends Component {
@@ -17,17 +17,19 @@ class SavedList extends Component {
               }}>
 
                 <div className="card-body">
-                  <a style={{marginLeft: '10px'}}
+                  <button
+                    style={{
+                    marginLeft: '10px'
+                  }}
+                    type="button"
+                    class="btn btn-outline-primary float-right"
+                    onClick={() => this.props.handleDelete(book._id)}>Delete</button>
+                  <a
                     href={book.link}
                     target="_blank"
                     rel="noreferrer noopener"
                     type="button"
                     class="btn btn-outline-primary float-right">View</a>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary float-right"
-                    onClick={() => this.props.handleDelete(book._id)}>Delete</button>
-                  <h5 className="card-title">Results</h5>
                   <p className="card-text">{book.title}</p>
                   <p className="card-text">{book.authors}</p>
                   <div className="row">
