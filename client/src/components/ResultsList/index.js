@@ -1,6 +1,5 @@
 import React from "react";
-import BookSearch from "../BookSearch";
-import Api from "../../utils/api";
+import API from "../../utils/API";
 
 function ResultsList(props) {
   function saveBook(book) {
@@ -11,7 +10,7 @@ function ResultsList(props) {
       title: book.volumeInfo.title,
       image: book.volumeInfo.imageLinks.thumbnail
     };
-    Api.saveBook(savedBook)
+    API.saveBook(savedBook)
   };
   return (
     <div>
@@ -23,14 +22,20 @@ function ResultsList(props) {
             <div className="card" style={{
               width: '18rem;'
             }}>
-
               <div className="card-body">
-                <a href={book.volumeInfo.infoLink} target="_blank" rel="noreferrer noopener" type="button" class="btn btn-outline-primary float-right">View</a>
+                <a
+                  style={{
+                  marginLeft: '10px'
+                }}
+                  href={book.volumeInfo.infoLink}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  type="button"
+                  class="btn btn-outline-primary float-right">View</a>
                 <button
                   type="button"
                   onClick={() => saveBook(book)}
                   class="btn btn-outline-primary float-right">Save</button>
-                <h5 className="card-title">Results</h5>
                 <p className="card-text">{book.volumeInfo.title}</p>
                 <p className="card-text">{book.volumeInfo.authors[0]}</p>
                 <div className="row">
@@ -45,7 +50,6 @@ function ResultsList(props) {
               </div>
             </div>
           )
-
         })
 }
     </div>
